@@ -1,14 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	fmt.Println("1-Motocicleta ")
-	fmt.Println("2- Liviano ")
-	fmt.Println("3- Carga Liviana ")
-	fmt.Println("4- Carga Pesada ")
-	fmt.Println("5- Agrícola ")
-	fmt.Println("6- - Casa Rodante ")
-	fmt.Println("7- Buses ")
-	fmt.Println("8- Regresar a menú principal ")
+	var horas, minutos, segundos int
+
+	for horas = 0; horas < 24; horas++ {
+		for minutos = 0; minutos < 60; minutos++ {
+			for segundos = 0; segundos < 60; segundos++ {
+				fmt.Printf("%02d:%02d:%02d\n", horas, minutos, segundos)
+				time.Sleep(time.Second * 2)
+			}
+
+		}
+	}
 }
